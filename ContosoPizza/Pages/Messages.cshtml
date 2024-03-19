@@ -1,0 +1,21 @@
+﻿@page
+@model ContosoPizza.Pages.MessagesModel
+@{
+  ViewData["Title"] = "Service Bus Message";
+}
+
+<h2>Service Bus Messages</h2>
+
+@if (Model.ServiceBusMessages.Any())
+{
+  <ul>
+    @foreach (var message in Model.ServiceBusMessages)
+    {
+      <li>@message</li>
+    }
+  </ul>
+}
+else
+{
+  <p>No messages found.</p>
+}
